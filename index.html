@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.css" />
+    <title>Responsive Tester</title>
+</head>
+
+<body>
+    <div class="col-sm"></div>
+    <div class="col-sm">
+        <div class="form" id="form">
+            <div class="input-group row">
+                <input v-model="url" placeholder="Enter the page URL" class="form-control" type="text">
+            </div>
+            <div class="input-group row">
+                <div class="col-sm">
+                    <select v-model="width" class="form-control">
+                        <option v-for="w in widths" v-bind:value="w">{{ w }}px</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                    <select v-model="height" class="form-control">
+                        <option v-for="h in widths" v-bind:value="h">{{ h }}px</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <button v-on:click="test" class="btn btn-success">
+                    Probar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
